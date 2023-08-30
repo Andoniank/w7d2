@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: rgba(0,9,64,255);
+}
+
+label {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(82,178,212);
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    color: rgb(220, 20, 157);
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(82,178,212);
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(82,178,212);
+}
+
+img {
+    margin: auto;
+    max-width: 250px;
+    display: flex;
+   justify-content: space-around;
+}
+
+div {
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+}

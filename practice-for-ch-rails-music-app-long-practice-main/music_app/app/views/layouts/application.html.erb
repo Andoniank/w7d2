@@ -9,19 +9,28 @@
     <%= stylesheet_link_tag "application" %>
   </head>
 
+
+
   <body>
-  <% if logged_in? %>
-    <h1>Hello <%= current_user.email %></h1>
-    <form action="<%= session_url %>" method="post">  
-      <input type="hidden" name="_method" value="DELETE">
-      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-      <input type="submit" value="logout!">
-    </form>
-  <% else  %>
-    <a href="<%= new_user_url %>">Go to new user page</a>
-    <br>
-    <a href="<%= new_session_url %>"> Go to Login page</a>
-  <% end  %>
-    <%= yield %>
+    <div class="main-content">
+      <%= image_tag 'music-man'%>
+      <h1 class="main-logo">Music Man</h1> 
+
+      <% if logged_in? %>
+        <h2>Hello <%= current_user.email %></h2>
+        <form action="<%= session_url %>" method="post">  
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <input type="submit" value="logout!">
+        </form>
+      <% else  %>
+        <a href="<%= new_user_url %>">Create New User</a>
+        <br>
+        <a href="<%= new_session_url %>"> Go to Login page</a>
+        <br>
+        <a href="<%= bands_url %>">Bands Index</a>
+      <% end  %>
+      <%= yield %>
+    </div>
   </body>
 </html>
